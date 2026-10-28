@@ -62,6 +62,7 @@ strong { font-weight: 600; }
 .intro .lede { margin-top: 18px; max-width: 58ch; color: var(--mut); font-size: clamp(17px, 1.4vw, 19px); }
 .intro h1 + .lede { margin-top: 32px; }
 .intro .links { display: flex; flex-wrap: wrap; gap: 12px 26px; margin-top: 26px; }
+.intro:not(.solo) .links .lnk { font-size: clamp(20px, 1.8vw, 24px); text-decoration-thickness: 2px; }
 .circled { position: relative; white-space: nowrap; }
 .circled svg { position: absolute; left: -10px; top: -8px; width: calc(100% + 20px); height: calc(100% + 16px); overflow: visible; pointer-events: none; }
 .circled path { fill: none; stroke: var(--pen); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 1.4s .5s var(--ease) forwards; }
