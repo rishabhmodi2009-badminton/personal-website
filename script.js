@@ -372,7 +372,7 @@ document.querySelectorAll('[data-strip]').forEach(function (b) {
       cy(.2, .2, .45, new T.MeshStandardMaterial({ color: 0xcfe3ef, transparent: true, opacity: .6 }), -.6, .9, 0, w);
       bx(.5, .7, .04, 0xf2d33c, .5, .9, .2, w);
     });
-    station('experience', 24, 16, function (g) {
+    station('experience', 72, 16, function (g) {
       var v = new T.Group(); g.add(v);
       bx(3.4, 1.9, 1.8, 0xffffff, -.3, .35, 0, v); bx(1.2, 1.4, 1.75, 0xffffff, 1.95, .35, 0, v);
       bx(1.0, .6, 1.77, 0x9cc3d5, 2.05, 1.05, 0, v);
@@ -392,7 +392,7 @@ document.querySelectorAll('[data-strip]').forEach(function (b) {
         var scr = bx(.5, .32, .03, 0x2443c4, x, .72, 1.42, g); scr.rotation.x = -.25;
       });
     });
-    station('service', 72, 16.5, function (g) {
+    station('service', 24, 16.5, function (g) {
       bx(3.2, .85, 1.2, 0xffffff, 0, 0, 0, g);
       [-1, 0, 1].forEach(function (x) { bx(.6, .03, .4, 0x333333, x, .85, .1, g); bx(.6, .4, .03, 0x16233f, x, .87, -.1, g); });
       sign('> build(ai_curriculum)', 2.6, .38, '#16233F', '#7FB2FF', g, 0, 1.7, -.3);
@@ -400,6 +400,8 @@ document.querySelectorAll('[data-strip]').forEach(function (b) {
       var scope = cy(.13, .18, 1.3, 0xffffff, 2.4, 1.2, 0, g, 12); scope.rotation.z = .9;
       sign('Code For All · Science Centre', 3, .32, '#2F6B3A', '#FFFDF8', g, 0, .5, .61);
     });
+
+    stations.sort(function (a, b) { return secs.indexOf(a.sec) - secs.indexOf(b.sec); });
 
     /* EcoBean can garden in the open corner */
     var garden = new T.Group(); garden.position.set(Math.cos(1.95) * 17.5, 0, Math.sin(1.95) * 17.5); garden.rotation.y = -.5; scene.add(garden);
