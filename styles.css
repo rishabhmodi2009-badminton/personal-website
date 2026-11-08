@@ -172,6 +172,7 @@ strong { font-weight: 600; }
 .minor h3 { font-size: 24px; }
 .minor .label { display: block; margin: 6px 0 8px; }
 .minor p { color: var(--mut); font-size: 15.5px; }
+.minor .full { grid-column: 1 / -1; }
 
 /* research */
 .question { font-family: var(--hd); font-weight: 600; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2; letter-spacing: -.015em; }
